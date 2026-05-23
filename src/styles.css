@@ -95,9 +95,14 @@ section {
   display: inline-flex;
   align-items: center;
   flex: 0 0 auto;
-  width: clamp(150px, 16vw, 188px);
+  width: clamp(184px, 19vw, 244px);
   text-decoration: none;
   transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.logo:focus,
+.logo:focus-visible {
+  outline: none;
 }
 
 .logo:hover {
@@ -1407,7 +1412,7 @@ section {
   }
 
   .logo {
-    width: 138px;
+    width: 154px;
   }
 
   .hero-section {
