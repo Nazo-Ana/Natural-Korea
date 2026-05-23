@@ -94,42 +94,20 @@ section {
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  flex: 0 0 auto;
+  width: clamp(150px, 16vw, 188px);
   text-decoration: none;
+  transition: transform 0.25s ease, filter 0.25s ease;
 }
 
-.logo-mark {
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  border: 2px solid rgba(201, 168, 76, 0.42);
-  border-radius: 50%;
-  color: var(--white);
-  background: linear-gradient(135deg, var(--green-accent), var(--green-light));
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 21px;
-  font-weight: 600;
+.logo:hover {
+  transform: translateY(-1px);
+  filter: drop-shadow(0 8px 18px rgba(120, 220, 70, 0.18));
 }
 
-.logo-text {
-  display: grid;
-  gap: 1px;
-  color: var(--white);
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 22px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  line-height: 1;
-}
-
-.logo-text small {
-  color: var(--gold-light);
-  font-family: 'DM Sans', Arial, sans-serif;
-  font-size: 10px;
-  font-weight: 400;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
+.logo-image {
+  width: 100%;
+  height: auto;
 }
 
 .nav-links {
@@ -1428,13 +1406,8 @@ section {
     padding-inline: 16px;
   }
 
-  .logo-text {
-    font-size: 19px;
-  }
-
-  .logo-mark {
-    width: 40px;
-    height: 40px;
+  .logo {
+    width: 138px;
   }
 
   .hero-section {

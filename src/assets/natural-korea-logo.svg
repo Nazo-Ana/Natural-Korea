@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 108" role="img" aria-labelledby="title desc">
+  <title id="title">Natural Korea logo</title>
+  <desc id="desc">Green capsule and leaf mark above the Natural Korea wordmark.</desc>
+  <defs>
+    <linearGradient id="leftCapsule" x1="70" x2="164" y1="33" y2="71" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#caff3e"/>
+      <stop offset="0.58" stop-color="#83d332"/>
+      <stop offset="1" stop-color="#2d8537"/>
+    </linearGradient>
+    <linearGradient id="rightCapsule" x1="175" x2="270" y1="34" y2="74" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#79c934"/>
+      <stop offset="1" stop-color="#228036"/>
+    </linearGradient>
+    <linearGradient id="leafGreen" x1="126" x2="236" y1="1" y2="55" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d8ff47"/>
+      <stop offset="1" stop-color="#38a443"/>
+    </linearGradient>
+    <filter id="softGlow" x="-18%" y="-28%" width="136%" height="156%">
+      <feGaussianBlur stdDeviation="2.8" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.5 0 0 0 0 0.95 0 0 0 0 0.18 0 0 0 0.48 0"/>
+      <feBlend in="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#softGlow)">
+    <rect x="68" y="35" width="99" height="37" rx="18.5" fill="url(#leftCapsule)" stroke="#073817" stroke-width="5" transform="rotate(-20 117.5 53.5)"/>
+    <path d="M84 63c16 9 38 8 61-1" fill="none" stroke="#e7ff67" stroke-linecap="round" stroke-width="4" opacity="0.5" transform="rotate(-20 117.5 53.5)"/>
+
+    <rect x="174" y="36" width="99" height="39" rx="19.5" fill="url(#rightCapsule)" stroke="#073817" stroke-width="5" transform="rotate(23 223.5 55.5)"/>
+    <path d="M190 45h49c14 0 24 10 24 24" fill="none" stroke="#b7ef4c" stroke-linecap="round" stroke-width="4" opacity="0.5" transform="rotate(23 223.5 55.5)"/>
+
+    <path d="M159 33c-18-4-29-15-35-27 23-5 44 4 55 24 2 4 3 8 4 13-8-2-16-5-24-10Z" fill="url(#leafGreen)" stroke="#073817" stroke-linejoin="round" stroke-width="4"/>
+    <path d="M189 35c-3-20 15-32 44-33 0 28-16 45-42 56" fill="url(#leafGreen)" stroke="#073817" stroke-linejoin="round" stroke-width="4"/>
+    <path d="M180 39c-10-18-26-27-48-31" fill="none" stroke="#073817" stroke-linecap="round" stroke-width="3" opacity="0.72"/>
+    <path d="M191 37c8-18 22-28 40-33" fill="none" stroke="#ecff72" stroke-linecap="round" stroke-width="2.5" opacity="0.55"/>
+
+    <circle cx="159" cy="52" r="6.5" fill="#7ed938" stroke="#073817" stroke-width="2.5"/>
+    <circle cx="177" cy="49" r="7.5" fill="#c2f438" stroke="#6aad22" stroke-width="2"/>
+    <circle cx="166" cy="68" r="5.5" fill="#54ba3a" stroke="#073817" stroke-width="2.5"/>
+    <circle cx="184" cy="66" r="5.5" fill="#57c13e" stroke="#073817" stroke-width="2.5"/>
+    <circle cx="174" cy="82" r="4.5" fill="#bdec3a" stroke="#6aad22" stroke-width="2"/>
+  </g>
+
+  <text x="170" y="101" text-anchor="middle" fill="#ffffff" stroke="#0a3716" stroke-width="3.6" paint-order="stroke fill" font-family="Cormorant Garamond, Georgia, serif" font-size="35" font-weight="600" letter-spacing="1">
+    Natural Korea
+  </text>
+</svg>

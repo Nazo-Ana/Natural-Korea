@@ -1,13 +1,9 @@
-import { brand } from '../data/siteContent.js';
+import logo from '../assets/natural-korea-logo.svg';
 
 export default function Logo() {
   return (
     <a className="logo" href="#hero" aria-label="Natural Korea home">
-      <span className="logo-mark">N</span>
-      <span className="logo-text">
-        {brand.name}
-        <small>{brand.label}</small>
-      </span>
+      <img className="logo-image" src={logo} alt="" aria-hidden="true" />
     </a>
   );
 }
