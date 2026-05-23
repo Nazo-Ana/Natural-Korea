@@ -4,7 +4,7 @@ export default function Certifications() {
   return (
     <section className="certifications reveal" aria-label="Trusted certifications">
       <p>Trusted Certifications</p>
-      <span className="cert-divider" />
+      <span className="cert-divider" aria-hidden="true" />
       <div className="cert-list">
         {certifications.map((cert) => (
           <div className="cert-item" key={cert.label}>

@@ -25,9 +25,9 @@ export default function Header() {
         aria-expanded={isMenuOpen}
         onClick={() => setIsMenuOpen((open) => !open)}
       >
-        <span />
-        <span />
-        <span />
+        <span aria-hidden="true" />
+        <span aria-hidden="true" />
+        <span aria-hidden="true" />
       </button>
       <nav className={isMenuOpen ? 'nav-links open' : 'nav-links'} aria-label="Main navigation">
         {navigation.map((item) => (

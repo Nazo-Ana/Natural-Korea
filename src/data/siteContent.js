@@ -21,7 +21,6 @@ export const navigation = [
   { label: 'Products', href: '#products' },
   { label: 'Manufacturing', href: '#manufacturing' },
   { label: 'Quality', href: '#why' },
-  { label: 'Careers', href: '#contact' },
 ];
 
 export const hero = {

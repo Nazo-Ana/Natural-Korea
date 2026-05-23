@@ -54,7 +54,7 @@ npm run dev
 Then open the local URL that Vite prints, usually:
 
 ```text
-http://127.0.0.1:5173/
+http://127.0.0.1:5174/
 ```
 
 In VS Code, you can also use the launch configuration named:
@@ -114,6 +114,19 @@ npm run build
 This creates a `dist` folder. Upload the contents of `dist` to your hosting provider.
 
 Do not edit files inside `dist` directly. They are generated from the `src` files.
+
+## 7. Deploy
+
+For Netlify:
+
+```text
+Build command: npm run build
+Publish directory: dist
+```
+
+This project includes `netlify.toml`, so Netlify can detect those settings automatically.
+
+For any static hosting provider, upload the contents of `dist/`.
 
 ## Important note about the contact form
 

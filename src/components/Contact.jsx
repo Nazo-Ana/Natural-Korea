@@ -84,19 +84,19 @@ export default function Contact() {
         <h3>Send a Message</h3>
 
         <div className="form-row">
-          <input name="firstName" type="text" placeholder="First Name" required />
-          <input name="lastName" type="text" placeholder="Last Name" required />
+          <input name="firstName" type="text" placeholder="First Name" aria-label="First name" required />
+          <input name="lastName" type="text" placeholder="Last Name" aria-label="Last name" required />
         </div>
 
-        <input name="email" type="email" placeholder="Email Address" required />
+        <input name="email" type="email" placeholder="Email Address" aria-label="Email address" required />
 
-        <select name="inquiryType" defaultValue={inquiryTypes[0]}>
+        <select name="inquiryType" defaultValue={inquiryTypes[0]} aria-label="Inquiry type">
           {inquiryTypes.map((type) => (
             <option key={type}>{type}</option>
           ))}
         </select>
 
-        <textarea name="message" placeholder="Your Message..." required />
+        <textarea name="message" placeholder="Your Message..." aria-label="Your message" required />
 
         <button className="form-submit" type="submit">
           Send Message
