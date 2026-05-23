@@ -1,64 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 116" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 128" role="img" aria-labelledby="title desc">
   <title id="title">Natural Korea logo</title>
-  <desc id="desc">Premium green capsule and leaf Natural Korea logo.</desc>
+  <desc id="desc">A premium green capsule and leaf mark beside the Natural Korea wordmark.</desc>
   <defs>
-    <linearGradient id="leftCapsuleFill" x1="53" x2="176" y1="50" y2="80" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#d8ff43"/>
-      <stop offset="0.34" stop-color="#a9ed35"/>
-      <stop offset="0.7" stop-color="#55b63b"/>
-      <stop offset="1" stop-color="#277f34"/>
+    <linearGradient id="leftCapsule" x1="13" x2="125" y1="77" y2="42" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#efff55"/>
+      <stop offset="0.28" stop-color="#baf33c"/>
+      <stop offset="0.66" stop-color="#57ba39"/>
+      <stop offset="1" stop-color="#238134"/>
     </linearGradient>
-    <linearGradient id="rightCapsuleFill" x1="191" x2="309" y1="44" y2="83" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#83d63a"/>
-      <stop offset="0.5" stop-color="#46ac3d"/>
+    <linearGradient id="rightCapsule" x1="95" x2="202" y1="42" y2="87" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7ed13a"/>
+      <stop offset="0.52" stop-color="#45a93b"/>
       <stop offset="1" stop-color="#1f7b35"/>
     </linearGradient>
-    <linearGradient id="leafFill" x1="136" x2="246" y1="3" y2="56" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#dcff43"/>
-      <stop offset="0.46" stop-color="#9be637"/>
-      <stop offset="1" stop-color="#34a141"/>
+    <linearGradient id="leafBright" x1="96" x2="173" y1="5" y2="57" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e3ff4b"/>
+      <stop offset="0.5" stop-color="#98e238"/>
+      <stop offset="1" stop-color="#34a143"/>
     </linearGradient>
-    <linearGradient id="leafDeep" x1="138" x2="190" y1="13" y2="48" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#83d83c"/>
-      <stop offset="1" stop-color="#258837"/>
+    <linearGradient id="wordFill" x1="226" x2="493" y1="41" y2="91" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f0ffe5"/>
+      <stop offset="1" stop-color="#b9ee64"/>
     </linearGradient>
-    <filter id="lift" x="-12%" y="-18%" width="124%" height="142%" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="3" stdDeviation="2.4" flood-color="#071f0f" flood-opacity="0.45"/>
-      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#7ee434" flood-opacity="0.28"/>
-    </filter>
-    <filter id="textLift" x="-5%" y="-18%" width="110%" height="136%" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="1.2" stdDeviation="0.9" flood-color="#071f0f" flood-opacity="0.7"/>
-    </filter>
   </defs>
 
-  <g filter="url(#lift)" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M80.2 71.6c-23.1 8.4-47.3.3-54.1-18.2-6.7-18.5 6.6-40.2 29.7-48.6l70.1-25.5c10.1-3.7 21.2 1.5 24.9 11.6l19.8 54.4c3.7 10.1-1.5 21.2-11.6 24.9L80.2 71.6Z" fill="url(#leftCapsuleFill)" stroke="#063515" stroke-width="6" transform="rotate(-17 96 29)"/>
-    <path d="M49.8 55.9c18.5 13.7 47.4 13.8 77.6.2" fill="none" stroke="#edff71" stroke-width="4.2" opacity="0.48" transform="rotate(-17 96 29)"/>
-    <path d="M123.4 2.3 153.6 85" fill="none" stroke="#083817" stroke-width="2.4" opacity="0.34" transform="rotate(-17 96 29)"/>
+  <g stroke="#073515" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M39.7 77.8C19.3 85.2 0.2 80.1-4.7 66.6-9.5 53.1 3.1 36.4 23.5 29l55.1-20.1c9.1-3.3 19.1 1.4 22.4 10.5l14.3 39.3c3.3 9.1-1.4 19.1-10.5 22.4L39.7 77.8Z" fill="url(#leftCapsule)" stroke-width="5" transform="rotate(-17 54 51)"/>
+    <path d="M20.5 67.4c15.7 9.8 37.7 9 61.3-2.2" fill="none" stroke="#f5ff82" stroke-width="4" opacity="0.55" transform="rotate(-17 54 51)"/>
+    <path d="M78.8 17.5 103.9 86" fill="none" stroke="#073515" stroke-width="2.2" opacity="0.26" transform="rotate(-17 54 51)"/>
 
-    <path d="M199.4 16.6h72.9c24.5 0 44.4 19.9 44.4 44.4s-19.9 44.4-44.4 44.4h-72.9c-10.4 0-18.8-8.4-18.8-18.8V35.4c0-10.4 8.4-18.8 18.8-18.8Z" fill="url(#rightCapsuleFill)" stroke="#063515" stroke-width="6" transform="rotate(22 248.6 61)"/>
-    <path d="M204.8 31.3h59.9c21.3 0 38.5 17.2 38.5 38.5" fill="none" stroke="#bff45a" stroke-width="4.2" opacity="0.45" transform="rotate(22 248.6 61)"/>
-    <path d="M186.2 21.3v75" fill="none" stroke="#083817" stroke-width="2.4" opacity="0.3" transform="rotate(22 248.6 61)"/>
+    <path d="M110.5 28.8h58.8c21.8 0 39.5 17.7 39.5 39.5s-17.7 39.5-39.5 39.5h-58.8c-9.4 0-17-7.6-17-17V45.8c0-9.4 7.6-17 17-17Z" fill="url(#rightCapsule)" stroke-width="5" transform="rotate(22 151 68)"/>
+    <path d="M111.7 43.3h50.5c18 0 32.5 14.5 32.5 32.5" fill="none" stroke="#c8fa62" stroke-width="4" opacity="0.48" transform="rotate(22 151 68)"/>
+    <path d="M99.6 37.7v63.9" fill="none" stroke="#073515" stroke-width="2.2" opacity="0.27" transform="rotate(22 151 68)"/>
 
-    <path d="M166.1 34.7c-19.9-4.2-34.6-16.8-43.9-34.3 26.7-5 51.3 6.7 64.6 31.6 2.8 5.2 4.8 10.8 5.9 16.7-8.8-3.3-17.8-7.7-26.6-14Z" fill="url(#leafDeep)" stroke="#063515" stroke-width="5"/>
-    <path d="M197.8 39.1c-3.8-28.2 19.7-49 58.6-51.4 1 36.3-20.6 59.6-57.8 71.7" fill="url(#leafFill)" stroke="#063515" stroke-width="5"/>
-    <path d="M190.8 45.7c-9.1-24.6-28.3-37.2-59.9-41.2" fill="none" stroke="#073314" stroke-width="3.4" opacity="0.75"/>
-    <path d="M199.7 42.2c11.4-24.6 29.6-40.6 51.6-47.9" fill="none" stroke="#efff74" stroke-width="3.2" opacity="0.46"/>
-    <path d="M170.5 29.1c-11-8.5-22.4-14.1-34.1-16.7" fill="none" stroke="#bdf052" stroke-width="2.5" opacity="0.34"/>
+    <path d="M92.6 35.2C75.7 31.6 63 20.9 55 6c22.7-4.3 43.8 5.6 55 26.8 2.4 4.5 4.1 9.2 5 14.2-7.5-2.8-15.1-6.6-22.4-11.8Z" fill="#54b83c" stroke-width="4"/>
+    <path d="M122.2 38.4c-3.2-24.1 16.8-41.8 49.9-43.9 0.8 31-17.6 50.9-49.2 61.2" fill="url(#leafBright)" stroke-width="4"/>
+    <path d="M114 45.8C105.9 25.4 89.5 15 62.8 11.6" fill="none" stroke-width="3" opacity="0.75"/>
+    <path d="M123.5 40.6c9.6-20.4 25.2-33.4 43.8-39.6" fill="none" stroke="#f2ff80" stroke-width="2.8" opacity="0.5"/>
 
-    <circle cx="169.5" cy="56.4" r="7.7" fill="#67c83d" stroke="#063515" stroke-width="3"/>
-    <circle cx="189.2" cy="53.2" r="8.4" fill="#c8f539" stroke="#74b928" stroke-width="2.4"/>
-    <circle cx="175.4" cy="75" r="6.6" fill="#53b83a" stroke="#063515" stroke-width="3"/>
-    <circle cx="196.1" cy="72" r="6.3" fill="#58c441" stroke="#063515" stroke-width="3"/>
-    <circle cx="183" cy="91.6" r="5.2" fill="#bdea3a" stroke="#70b327" stroke-width="2.3"/>
+    <circle cx="93.8" cy="59.1" r="6.8" fill="#6aca3c" stroke-width="2.5"/>
+    <circle cx="110.5" cy="56.2" r="7.2" fill="#c8f439" stroke="#75b828" stroke-width="2.2"/>
+    <circle cx="99.4" cy="75.2" r="5.7" fill="#50b739" stroke-width="2.5"/>
+    <circle cx="116.7" cy="72.7" r="5.5" fill="#58c240" stroke-width="2.5"/>
+    <circle cx="105.9" cy="89.4" r="4.6" fill="#bdeb3b" stroke="#72b429" stroke-width="2"/>
   </g>
 
-  <g filter="url(#textLift)">
-    <text x="180" y="109" text-anchor="middle" fill="#eaffda" stroke="#073515" stroke-width="3.2" paint-order="stroke fill" font-family="Arial Rounded MT Bold, Arial, sans-serif" font-size="35" font-weight="700" letter-spacing="0.6">
+  <g>
+    <text x="226" y="76" fill="#083716" stroke="#083716" stroke-width="5.5" paint-order="stroke fill" font-family="Arial Rounded MT Bold, Arial, sans-serif" font-size="45" font-weight="800" letter-spacing="0.4">
       Natural Korea
     </text>
-    <text x="180" y="109" text-anchor="middle" fill="#c6f268" font-family="Arial Rounded MT Bold, Arial, sans-serif" font-size="35" font-weight="700" letter-spacing="0.6" opacity="0.18">
+    <text x="226" y="76" fill="url(#wordFill)" font-family="Arial Rounded MT Bold, Arial, sans-serif" font-size="45" font-weight="800" letter-spacing="0.4">
       Natural Korea
     </text>
+    <path d="M230 91h218" fill="none" stroke="#b9ee64" stroke-width="3" opacity="0.72"/>
+    <path d="M230 99h122" fill="none" stroke="#f0ffe5" stroke-width="2" opacity="0.3"/>
   </g>
 </svg>
