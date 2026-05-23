@@ -95,7 +95,7 @@ section {
   display: inline-flex;
   align-items: center;
   flex: 0 0 auto;
-  width: clamp(184px, 19vw, 244px);
+  width: clamp(220px, 22vw, 278px);
   text-decoration: none;
   transition: transform 0.25s ease, filter 0.25s ease;
 }
@@ -1412,7 +1412,7 @@ section {
   }
 
   .logo {
-    width: 154px;
+    width: 172px;
   }
 
   .hero-section {
