@@ -1,4 +1,4 @@
-import logo from '../assets/natural-korea-logo.svg';
+import logo from '../assets/Natural Korea Logo PNG.png';
 
 export default function Logo() {
   return (
