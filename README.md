@@ -1,145 +1,135 @@
-# Natural Korea React Website
+# Natural Korea Website
 
-This is the cleaner React version of the original one-file HTML website.
+Production React + Vite + TypeScript website for `www.naturalkorea.company`.
 
-## Current status
+## Stack
 
-The React/Vite version is the current website. Edit the files in `src/`, run the app with `npm run dev`, and build the deployable site with `npm run build`.
+- React 18
+- Vite
+- TypeScript
+- Vercel serverless functions
+- Resend email delivery
 
-The old HTML file and unused raw source photos have been kept as local backups in `archive/`.
-
-The old file is here:
-
-```text
-archive/Natural korea website.html
-```
-
-The new React website starts here:
+## Project Structure
 
 ```text
-src/App.jsx
-src/data/siteContent.js
-src/styles.css
+src/
+├── assets/
+│   ├── icons/
+│   ├── images/
+│   │   ├── brand/
+│   │   └── products/
+│   └── videos/
+├── components/
+│   ├── common/
+│   ├── layout/
+│   └── ui/
+├── constants/
+├── hooks/
+├── pages/
+├── sections/
+├── services/
+├── styles/
+├── types/
+├── utils/
+├── App.tsx
+└── main.tsx
+
+api/
+└── contact.ts
 ```
 
-## 1. Install Node.js
-
-React needs Node.js and npm. Install the LTS version from:
-
-```text
-https://nodejs.org/
-```
-
-After installing, close and reopen VS Code, then check:
-
-```bash
-node --version
-npm --version
-```
-
-## 2. Install the project packages
-
-From this folder:
+## Local Development
 
 ```bash
 npm install
-```
-
-## 3. Start the website locally
-
-```bash
 npm run dev
 ```
 
-Then open the local URL that Vite prints, usually:
+The local Vite app runs at:
 
 ```text
 http://127.0.0.1:5174/
 ```
 
-In VS Code, you can also use the launch configuration named:
-
-```text
-Open Natural Korea React app
-```
-
-## 4. Edit the website content
-
-Most content is in:
-
-```text
-src/data/siteContent.js
-```
-
-Edit this file when you want to change:
-
-- Product names
-- Product descriptions
-- Contact email
-- Instagram link
-- Address
-- Testimonials
-- Footer links
-
-## 5. Replace product pictures
-
-Put new pictures here:
-
-```text
-src/assets/products/
-```
-
-Then import them in:
-
-```text
-src/data/siteContent.js
-```
-
-Example:
-
-```js
-import newProductImage from '../assets/products/my-new-product.png';
-```
-
-Then use `newProductImage` in the product object you want to update.
-
-## 6. Build for hosting
-
-When the website is ready:
+## Quality Checks
 
 ```bash
+npm run typecheck
 npm run build
 ```
 
-This creates a `dist` folder. Upload the contents of `dist` to your hosting provider.
+`npm run build` runs TypeScript first, then creates the production bundle in `dist/`.
 
-Do not edit files inside `dist` directly. They are generated from the `src` files.
+## Editing Content
 
-## 7. Deploy
-
-For Netlify:
+Most site copy, navigation, product data, testimonials, footer links, and brand contact details live in:
 
 ```text
-Build command: npm run build
-Publish directory: dist
+src/constants/siteContent.ts
 ```
 
-This project includes `netlify.toml`, so Netlify can detect those settings automatically.
-
-For any static hosting provider, upload the contents of `dist/`.
-
-## Important note about the contact form
-
-The contact form is launch-safe without a backend. If no Formspree endpoint is configured, it opens a pre-filled email to the company email address.
-
-To use Formspree later, copy `.env.example` to `.env` and set:
+Contact form constants live in:
 
 ```text
-VITE_FORMSPREE_ENDPOINT=https://formspree.io/f/YOUR_FORM_ID
+src/constants/contact.ts
 ```
 
-The contact code is in:
+## Replacing Assets
+
+Product images:
 
 ```text
-src/components/Contact.jsx
+src/assets/images/products/
 ```
+
+Brand images:
+
+```text
+src/assets/images/brand/
+```
+
+Import new files in `src/constants/siteContent.ts` and use the imported asset in the related content object.
+
+## Contact Form
+
+The public form posts to:
+
+```text
+/api/contact
+```
+
+The serverless function validates the payload, checks a honeypot field, applies a basic per-IP rate limit, and sends the email through Resend to:
+
+```text
+sales@naturalkorea.company
+```
+
+Required environment variables:
+
+```text
+RESEND_API_KEY=
+CONTACT_FROM_EMAIL=Natural Korea <sales@naturalkorea.company>
+CONTACT_TO_EMAIL=sales@naturalkorea.company
+```
+
+`CONTACT_FROM_EMAIL` must use a domain verified in Resend. Configure these variables in Vercel Project Settings under Environment Variables.
+
+For local end-to-end testing of the serverless function, run the project through Vercel CLI:
+
+```bash
+npx vercel dev
+```
+
+## Deployment
+
+Vercel settings:
+
+```text
+Framework Preset: Vite
+Build Command: npm run build
+Output Directory: dist
+Install Command: npm ci
+```
+
+The `/api/contact.ts` file is deployed by Vercel as a serverless function. Do not expose `RESEND_API_KEY` through any `VITE_` environment variable.
