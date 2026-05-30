@@ -1,0 +1,233 @@
+﻿.certifications {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(22px, 4vw, 56px);
+  padding: 54px clamp(20px, 4vw, 60px);
+  border-block: 1px solid rgba(0, 0, 0, 0.06);
+  background: var(--white);
+}
+
+.certifications > p {
+  margin: 0;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 12px;
+}
+
+.cert-divider {
+  width: 1px;
+  height: 42px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.cert-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+}
+
+.cert-item {
+  display: grid;
+  justify-items: center;
+  gap: 9px;
+  color: var(--text-dark);
+  opacity: 0.72;
+}
+
+.cert-item span {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--green-accent), var(--green-deep));
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cert-item strong {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 11px;
+}
+
+.split-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(44px, 6vw, 80px);
+  padding: 118px clamp(20px, 4vw, 60px);
+}
+
+.about-section,
+.manufacturing-section,
+.leadership-section,
+.contact-section {
+  background: var(--cream);
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+  min-height: 520px;
+}
+
+.image-main,
+.image-small {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  box-shadow: var(--shadow-soft);
+}
+
+.image-main {
+  grid-row: 1 / 3;
+}
+
+.image-main.wide {
+  grid-column: 1 / 3;
+  grid-row: auto;
+}
+
+.image-main img,
+.image-small img,
+.feature-image img,
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--ease);
+}
+
+.image-main:hover img,
+.image-small:hover img,
+.feature-image:hover img,
+.product-card:hover img {
+  transform: scale(1.04);
+}
+
+.section-heading.center {
+  text-align: center;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 20px;
+  color: var(--green-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.section-label.light {
+  color: var(--gold-light);
+}
+
+.section-label::before {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: currentColor;
+}
+
+.section-heading.center .section-label {
+  justify-content: center;
+}
+
+.section-title {
+  color: var(--text-dark);
+  font-size: clamp(36px, 5vw, 62px);
+  line-height: 1.1;
+}
+
+.section-title.light {
+  color: var(--white);
+}
+
+.section-title:not(.light) em {
+  color: var(--green-accent);
+}
+
+.body-copy {
+  margin: 24px 0 0;
+  color: var(--text-muted);
+  font-size: 16px;
+}
+
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.pillar-card,
+.feature-list-item,
+.why-card,
+.leader-card,
+.contact-form {
+  background: var(--white);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.pillar-card {
+  padding: 20px;
+  border-left: 3px solid var(--green-light);
+  border-radius: 14px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pillar-card:hover,
+.feature-list-item:hover {
+  transform: translateX(6px);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.1);
+}
+
+.pillar-card span,
+.why-card span,
+.feature-list-item > span,
+.contact-item > span {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 12px;
+  border-radius: 14px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--green-accent), var(--green-light));
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.pillar-card h3,
+.feature-list-item h3,
+.why-card h3,
+.product-body h3,
+.leader-card h3,
+.contact-form h3 {
+  margin: 0 0 8px;
+  color: var(--text-dark);
+  font-size: 16px;
+}
+
+.pillar-card p,
+.feature-list-item p,
+.why-card p,
+.product-body p,
+.leader-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+

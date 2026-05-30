@@ -1,5 +1,5 @@
-import SectionHeading from '../components/common/SectionHeading';
-import { leadership } from '../constants/siteContent';
+import { SectionHeading } from '../shared';
+import { leadership } from '../../data/siteContent';
 
 export default function LeadershipSection() {
   return (

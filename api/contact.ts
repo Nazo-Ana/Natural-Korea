@@ -1,100 +1,7 @@
-import { Resend } from 'resend';
 import { CONTACT_EMAIL } from '../src/constants/contact';
-import type { ContactApiResponse } from '../src/types/contact';
+import { getRequestIp, isRateLimited, parseBody, sendContactEmail } from '../src/api/contact';
+import type { ServerlessRequest, ServerlessResponse } from '../src/api/contact';
 import { hasValidationErrors, normalizeContactForm, validateContactForm } from '../src/utils/contactValidation';
-
-type JsonObject = Record<string, unknown>;
-
-type ServerlessRequest = {
-  method?: string;
-  body?: unknown;
-  headers: Record<string, string | string[] | undefined>;
-  socket?: {
-    remoteAddress?: string;
-  };
-};
-
-type ServerlessResponse = {
-  status(statusCode: number): ServerlessResponse;
-  json(body: ContactApiResponse): void;
-  setHeader(name: string, value: string): void;
-};
-
-type RateLimitEntry = {
-  count: number;
-  resetAt: number;
-};
-
-const RATE_LIMIT_WINDOW_MS = 60_000;
-const RATE_LIMIT_MAX_REQUESTS = 3;
-const rateLimits = new Map<string, RateLimitEntry>();
-
-function getRequestIp(request: ServerlessRequest) {
-  const forwardedFor = request.headers['x-forwarded-for'];
-  const firstForwardedIp = Array.isArray(forwardedFor) ? forwardedFor[0] : forwardedFor;
-  return firstForwardedIp?.split(',')[0]?.trim() || request.socket?.remoteAddress || 'unknown';
-}
-
-function isRateLimited(ipAddress: string) {
-  const now = Date.now();
-  const current = rateLimits.get(ipAddress);
-
-  if (!current || current.resetAt <= now) {
-    rateLimits.set(ipAddress, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
-    return false;
-  }
-
-  current.count += 1;
-  return current.count > RATE_LIMIT_MAX_REQUESTS;
-}
-
-function parseBody(body: unknown): JsonObject | null {
-  if (!body) return null;
-  if (typeof body === 'string') {
-    try {
-      const parsed = JSON.parse(body) as unknown;
-      return typeof parsed === 'object' && parsed !== null ? (parsed as JsonObject) : null;
-    } catch {
-      return null;
-    }
-  }
-
-  return typeof body === 'object' ? (body as JsonObject) : null;
-}
-
-function escapeHtml(value: string) {
-  return value
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;')
-    .replaceAll("'", '&#039;');
-}
-
-function buildEmailHtml(values: ReturnType<typeof normalizeContactForm>) {
-  return `
-    <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #0d2b1a;">
-      <h2>New Natural Korea website inquiry</h2>
-      <p><strong>Name:</strong> ${escapeHtml(values.firstName)} ${escapeHtml(values.lastName)}</p>
-      <p><strong>Email:</strong> ${escapeHtml(values.email)}</p>
-      <p><strong>Inquiry type:</strong> ${escapeHtml(values.inquiryType)}</p>
-      <hr style="border: 0; border-top: 1px solid #d9e0d8;" />
-      <p>${escapeHtml(values.message).replaceAll('\n', '<br />')}</p>
-    </div>
-  `;
-}
-
-function buildEmailText(values: ReturnType<typeof normalizeContactForm>) {
-  return [
-    'New Natural Korea website inquiry',
-    '',
-    `Name: ${values.firstName} ${values.lastName}`,
-    `Email: ${values.email}`,
-    `Inquiry type: ${values.inquiryType}`,
-    '',
-    values.message,
-  ].join('\n');
-}
 
 export default async function handler(request: ServerlessRequest, response: ServerlessResponse) {
   response.setHeader('Cache-Control', 'no-store');
@@ -148,15 +55,7 @@ export default async function handler(request: ServerlessRequest, response: Serv
     return;
   }
 
-  const resend = new Resend(apiKey);
-  const { error } = await resend.emails.send({
-    from,
-    to,
-    replyTo: values.email,
-    subject: `Natural Korea website inquiry - ${values.inquiryType}`,
-    text: buildEmailText(values),
-    html: buildEmailHtml(values),
-  });
+  const { error } = await sendContactEmail(values, { apiKey, from, to });
 
   if (error) {
     console.error('Resend contact form error', error);

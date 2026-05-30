@@ -1,5 +1,5 @@
-import ButtonLink from '../components/ui/ButtonLink';
-import { ginsengFeature } from '../constants/siteContent';
+import { ButtonLink } from '../ui';
+import { ginsengFeature } from '../../data/siteContent';
 
 export default function GinsengFeatureSection() {
   return (

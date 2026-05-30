@@ -1,0 +1,119 @@
+﻿.leadership-section {
+  padding: 82px clamp(20px, 4vw, 60px);
+  text-align: center;
+}
+
+.leader-card {
+  max-width: 430px;
+  margin: 42px auto 0;
+  padding: 48px;
+  border-radius: 26px;
+  overflow: hidden;
+}
+
+.leader-avatar {
+  width: 96px;
+  height: 96px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--green-accent), var(--green-mid));
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 30px;
+}
+
+.leader-card h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.leader-title {
+  margin-bottom: 18px;
+  color: var(--green-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.testimonials-section {
+  text-align: center;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 1120px;
+  margin: 64px auto 0;
+}
+
+.testimonial-card {
+  padding: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--white);
+  text-align: left;
+  transition: transform var(--ease), background var(--ease);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.quote-mark {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--gold);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 60px;
+  line-height: 0.8;
+}
+
+.testimonial-card > p {
+  margin: 0 0 28px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.testimonial-author > span {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--green-accent), var(--green-light));
+}
+
+.testimonial-author strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--gold);
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.testimonial-author h3 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.testimonial-author small {
+  color: rgba(255, 255, 255, 0.44);
+  font-size: 12px;
+}
+

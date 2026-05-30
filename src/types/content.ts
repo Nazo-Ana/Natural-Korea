@@ -1,5 +1,3 @@
-import type { ReactNode } from 'react';
-
 export type ImageAsset = {
   src: string;
   alt: string;
@@ -7,9 +5,7 @@ export type ImageAsset = {
 
 export type Brand = {
   name: string;
-  label: string;
   tagline: string;
-  founded: string;
   email: string;
   instagram: string;
   instagramHandle: string;
@@ -53,5 +49,3 @@ export type Testimonial = {
 };
 
 export type FooterLinks = Record<string, string[]>;
-
-export type HeadingChildren = ReactNode;

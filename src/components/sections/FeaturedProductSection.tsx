@@ -1,5 +1,5 @@
-import MetricGrid from '../components/common/MetricGrid';
-import { featuredProduct } from '../constants/siteContent';
+import { MetricGrid } from '../shared';
+import { featuredProduct } from '../../data/siteContent';
 
 export default function FeaturedProductSection() {
   return (

@@ -1,6 +1,6 @@
-import MetricGrid from '../components/common/MetricGrid';
-import ButtonLink from '../components/ui/ButtonLink';
-import { hero } from '../constants/siteContent';
+import { MetricGrid } from '../shared';
+import { ButtonLink } from '../ui';
+import { hero } from '../../data/siteContent';
 
 export default function HeroSection() {
   return (

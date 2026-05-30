@@ -4,14 +4,12 @@ import omega369Card from '../assets/images/products/omega-369-card.png';
 import omega369Pack from '../assets/images/products/omega-369-pack.png';
 import omegaCard from '../assets/images/products/omega-fish-oil-card.png';
 import omegaHero from '../assets/images/products/omega-fish-oil-hero.png';
-import { CONTACT_EMAIL } from './contact';
+import { CONTACT_EMAIL } from '../constants/contact';
 import type { Brand, Certification, FooterLinks, IconCard, ImageAsset, NavigationItem, Product, Stat, Testimonial } from '../types/content';
 
 export const brand: Brand = {
   name: 'Natural Korea',
-  label: 'Premium Grade',
   tagline: 'Enhancing health through science and nature',
-  founded: '2018',
   email: CONTACT_EMAIL,
   instagram: 'https://www.instagram.com/naturalkorea_',
   instagramHandle: '@naturalkorea_',
@@ -85,7 +83,6 @@ export const about = {
 
 export const featuredProduct = {
   eyebrow: 'Bestseller - Fish Oil Softgel',
-  title: 'Natural Korea Omega-3 Fish Oil Softgel',
   image: omegaHero,
   imageAlt: 'Omega-3 Fish Oil Softgel',
   text:

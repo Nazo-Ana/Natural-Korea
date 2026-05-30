@@ -1,7 +1,7 @@
-import ImageGrid from '../components/common/ImageGrid';
-import SectionHeading from '../components/common/SectionHeading';
-import { about } from '../constants/siteContent';
-import { revealDelayClass } from '../utils/reveal';
+import { IconCard } from '../cards';
+import { ImageGrid, SectionHeading } from '../shared';
+import { about } from '../../data/siteContent';
+import { revealDelayClass } from '../../utils/reveal';
 
 export default function AboutSection() {
   return (
@@ -19,11 +19,13 @@ export default function AboutSection() {
         ))}
         <div className="pillar-grid">
           {about.pillars.map((pillar, index) => (
-            <article className={`pillar-card reveal ${revealDelayClass(index, 1)}`} key={pillar.title}>
-              <span>{pillar.icon}</span>
-              <h3>{pillar.title}</h3>
-              <p>{pillar.text}</p>
-            </article>
+            <IconCard
+              className={`pillar-card reveal ${revealDelayClass(index, 1)}`}
+              icon={pillar.icon}
+              key={pillar.title}
+              text={pillar.text}
+              title={pillar.title}
+            />
           ))}
         </div>
       </div>

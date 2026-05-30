@@ -1,4 +1,4 @@
-import { certifications } from '../constants/siteContent';
+import { certifications } from '../../data/siteContent';
 
 export default function CertificationsSection() {
   return (

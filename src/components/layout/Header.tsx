@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Logo from '../common/Logo';
-import { navigation } from '../../constants/siteContent';
+import Logo from '../shared/Logo';
+import { navigation } from '../../data/siteContent';
 import { useScrollThreshold } from '../../hooks/useScrollThreshold';
 import { cx } from '../../utils/classNames';
 

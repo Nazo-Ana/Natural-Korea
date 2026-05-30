@@ -1,7 +1,7 @@
-import ImageGrid from '../components/common/ImageGrid';
-import SectionHeading from '../components/common/SectionHeading';
-import { manufacturing } from '../constants/siteContent';
-import { revealDelayClass } from '../utils/reveal';
+import { IconCard } from '../cards';
+import { ImageGrid, SectionHeading } from '../shared';
+import { manufacturing } from '../../data/siteContent';
+import { revealDelayClass } from '../../utils/reveal';
 
 export default function ManufacturingSection() {
   const manufacturingImages = [
@@ -18,13 +18,14 @@ export default function ManufacturingSection() {
         <p className="body-copy reveal reveal-delay-2">{manufacturing.text}</p>
         <div className="feature-list">
           {manufacturing.features.map((feature, index) => (
-            <article className={`feature-list-item reveal ${revealDelayClass(index, 0, 3)}`} key={feature.title}>
-              <span>{feature.icon}</span>
-              <div>
-                <h3>{feature.title}</h3>
-                <p>{feature.text}</p>
-              </div>
-            </article>
+            <IconCard
+              className={`feature-list-item reveal ${revealDelayClass(index, 0, 3)}`}
+              contentWrapper
+              icon={feature.icon}
+              key={feature.title}
+              text={feature.text}
+              title={feature.title}
+            />
           ))}
         </div>
       </div>

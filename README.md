@@ -14,29 +14,36 @@ Production React + Vite + TypeScript website for `www.naturalkorea.company`.
 
 ```text
 src/
-├── assets/
-│   ├── icons/
-│   ├── images/
-│   │   ├── brand/
-│   │   └── products/
-│   └── videos/
-├── components/
-│   ├── common/
-│   ├── layout/
-│   └── ui/
-├── constants/
-├── hooks/
-├── pages/
-├── sections/
-├── services/
-├── styles/
-├── types/
-├── utils/
-├── App.tsx
-└── main.tsx
+|-- api/
+|   `-- contact/
+|-- assets/
+|   |-- icons/
+|   |-- images/
+|   |   `-- products/
+|   `-- logos/
+|-- components/
+|   |-- cards/
+|   |-- forms/
+|   |-- layout/
+|   |-- sections/
+|   |-- shared/
+|   `-- ui/
+|-- constants/
+|-- data/
+|-- hooks/
+|-- layouts/
+|-- pages/
+|-- routes/
+|-- services/
+|-- store/
+|-- styles/
+|-- types/
+|-- utils/
+|-- App.tsx
+`-- main.tsx
 
 api/
-└── contact.ts
+`-- contact.ts
 ```
 
 ## Local Development
@@ -66,7 +73,7 @@ npm run build
 Most site copy, navigation, product data, testimonials, footer links, and brand contact details live in:
 
 ```text
-src/constants/siteContent.ts
+src/data/siteContent.ts
 ```
 
 Contact form constants live in:
@@ -83,13 +90,13 @@ Product images:
 src/assets/images/products/
 ```
 
-Brand images:
+Brand logos:
 
 ```text
-src/assets/images/brand/
+src/assets/logos/
 ```
 
-Import new files in `src/constants/siteContent.ts` and use the imported asset in the related content object.
+Import new files in `src/data/siteContent.ts` and use the imported asset in the related content object.
 
 ## Contact Form
 

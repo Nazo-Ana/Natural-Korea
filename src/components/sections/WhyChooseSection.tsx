@@ -1,6 +1,7 @@
-import SectionIntro from '../components/common/SectionIntro';
-import { whyChoose } from '../constants/siteContent';
-import { revealDelayClass } from '../utils/reveal';
+import { IconCard } from '../cards';
+import { SectionIntro } from '../shared';
+import { whyChoose } from '../../data/siteContent';
+import { revealDelayClass } from '../../utils/reveal';
 
 export default function WhyChooseSection() {
   return (
@@ -15,11 +16,13 @@ export default function WhyChooseSection() {
 
       <div className="why-grid">
         {whyChoose.map((item, index) => (
-          <article className={`why-card reveal ${revealDelayClass(index)}`} key={item.title}>
-            <span>{item.icon}</span>
-            <h3>{item.title}</h3>
-            <p>{item.text}</p>
-          </article>
+          <IconCard
+            className={`why-card reveal ${revealDelayClass(index)}`}
+            icon={item.icon}
+            key={item.title}
+            text={item.text}
+            title={item.title}
+          />
         ))}
       </div>
     </section>

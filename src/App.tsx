@@ -1,8 +1,8 @@
 import { useRevealOnScroll } from './hooks/useRevealOnScroll';
-import HomePage from './pages/HomePage';
+import AppRoutes from './routes/AppRoutes';
 
 export default function App() {
   useRevealOnScroll();
 
-  return <HomePage />;
+  return <AppRoutes />;
 }

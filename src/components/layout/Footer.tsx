@@ -1,5 +1,5 @@
-import Logo from '../common/Logo';
-import { brand, footerLinks } from '../../constants/siteContent';
+import Logo from '../shared/Logo';
+import { brand, footerLinks } from '../../data/siteContent';
 
 const linkTargets: Record<string, string> = {
   'About Us': '#about',
