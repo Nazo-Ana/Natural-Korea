@@ -27,8 +27,8 @@
   display: inline-flex;
   align-items: center;
   flex: 0 0 auto;
-  width: clamp(142px, 13vw, 190px);
-  height: clamp(100px, 9vw, 126px);
+  width: clamp(160px, 15vw, 220px);
+  height: clamp(110px, 10vw, 146px);
   text-decoration: none;
   transition: filter 0.25s ease;
 }
